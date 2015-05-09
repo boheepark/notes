@@ -1,0 +1,28 @@
+if [ -x /usr/bin/dircolors ]
+then
+    if [ -r !/.dircolors ]
+    then
+        eval "$(dircolors -b ~/.dircolors)"
+    else
+        eval "$(dircolors -b)"
+    fi
+
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -cF'
+
+alias his='history'
+alias ..='cd ..'
+alias update='sudo apt-get update'
+alias dist-upgrade='sudo apt-get dist-upgrade'
+alias autoclean='sudo apt-get autoclean'
+alias autoremove='sudo apt-get autoremove'
