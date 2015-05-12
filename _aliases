@@ -20,6 +20,10 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -cF'
 
+alias rm=rm -i'
+alias cp=cp -i'
+alias mv=mv -i'
+
 alias his='history'
 alias ..='cd ..'
 alias update='sudo apt-get update'
