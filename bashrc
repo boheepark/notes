@@ -69,9 +69,7 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
+xterm*|rxvt*) PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1" ;;
            *) ;;
 esac
 
@@ -104,6 +102,58 @@ back ()
     cd $OLDPWD
     echo $PWD
 }
+
+reloadrc ()
+{
+  . ~/.bashrc
+}
+
+virc ()
+{
+    if [ -z $1 ]
+    then
+        vi ~/.bashrc
+    elif [ $1 = ksh ]
+    then
+        vi ~/.kshrc
+    fi
+}
+
+think ()
+{
+    . "$1"think/bin/activate
+}
+
+unthink ()
+{
+    deactivate
+}
+
+py ()
+{
+    case $1 in
+    *.py | -*) python $1 ;;
+           "") python ;;
+            *) python $1".py" ;;
+    esac
+}
+
+py3 ()
+{
+    case $1 in
+    *.py | -*) python3 $1 ;;
+           "") python3 ;;
+            *) python3 $1".py" ;;
+    esac
+}
+
+
+# Django stuff
+mng ()
+{
+    manage.py $1
+}
+
 
 export PATH=.:$PATH
 
