@@ -119,14 +119,9 @@ virc ()
     fi
 }
 
-think ()
+venv ()
 {
-    . "$1"think/bin/activate
-}
-
-unthink ()
-{
-    deactivate
+    . "$1"venv/bin/activate
 }
 
 py ()
