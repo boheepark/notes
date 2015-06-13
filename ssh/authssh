@@ -1,0 +1,9 @@
+if [ ! $# == 2 ]; then
+    echo "Usage: $0 <user> <host>"
+    exit
+fi
+
+user="$1"
+host="$2"
+
+cat ~/.ssh/id_rsa.pub | ssh $user@$host 'cat >> ~/.ssh/authorized_keys'

@@ -16,18 +16,44 @@ then
     alias egrep='egrep --color=auto'
 fi
 
+
+
+# ls
+
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -cF'
+
+
+
 
 # confirm
 # alias rm=rm -i'
 # alias cp=cp -i'
 # alias mv=mv -i'
 
-alias his='history'
-alias ..='cd ..'
+
+
+
+# apt-get
+
 alias update='sudo apt-get update'
 alias dist-upgrade='sudo apt-get dist-upgrade'
 alias autoclean='sudo apt-get autoclean'
 alias autoremove='sudo apt-get autoremove'
+
+
+
+# python
+
+
+# django
+alias mng='manage.py'
+
+
+
+
+# random
+
+alias his='history'
+alias ..='cd ..'

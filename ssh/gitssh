@@ -1,0 +1,21 @@
+[$] ssh-keygen -t rsa -b 4096 -C "boheepark@yahoo.com"
+[$] press enter
+[$] passphrase
+[$] passphrase
+
+[$] eval "$(ssh-agent -s)"
+[$] ssh-add ~/.ssh/id_rsa
+
+[*] ~/.ssh/id_rsa.pub
+    copy everything
+
+[@] github
+    [@] click Settings
+    [@] click SSH keys
+    [@] click Add SSH keys
+    [@] add label
+    [@] paste SSH key
+    [@] click Add key
+
+[$] ssh -T git@github.com
+[$] yes
