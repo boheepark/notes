@@ -1,0 +1,11 @@
+SET sudo to not require password
+
+[*] /etc/sudoers
+
+    [*] %admin ALL=(ALL) NOPASSWD:ALL
+    [*] move %admin under %sudo
+
+
+[#] groupadd admin
+[#] adduser <user> sudo
+[#] adduser <user> admin
