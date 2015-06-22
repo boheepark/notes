@@ -140,12 +140,6 @@ authssh ()
 
 
 # python
-
-venv ()
-{
-    . "$1"venv/bin/activate
-}
-
 py ()
 {
     case $1 in
